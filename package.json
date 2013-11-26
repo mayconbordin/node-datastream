@@ -1,0 +1,29 @@
+{
+    "name" : "node-datastream",
+    "version" : "0.0.1",
+    "description" : "algorithms for data stream processing",
+    "main" : "index.js",
+    "dependencies" : {
+        "heap" : "~0.2.3"
+    },
+    "devDependencies" : {
+
+    },
+    "scripts" : {
+        
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/mayconbordin/node-datastream.git"
+    },
+    "keywords" : [
+        "data stream processing"
+    ],
+    "author" : {
+        "name" : "Maycon Bordin",
+        "email" : "mayconbordin@gmail.com",
+        "url" : "http://github.com/mayconbordin"
+    },
+    "license" : "MIT",
+    "engine" : { "node" : ">=0.10" }
+}
