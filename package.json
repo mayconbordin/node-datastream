@@ -4,7 +4,8 @@
     "description" : "algorithms for data stream processing",
     "main" : "index.js",
     "dependencies" : {
-        "heap" : "~0.2.3"
+        "heap" : "~0.2.3",
+        "hashes": "~0.1.2"
     },
     "devDependencies" : {
 
