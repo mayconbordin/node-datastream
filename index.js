@@ -1,18 +1,18 @@
-var countmin         = require('./lib/countmin.js')
-  , spacesaving      = require('./lib/spacesaving.js')
-  , lossycounting    = require('./lib/lossycounting.js')
-  , lossycountingvar = require('./lib/lossycountingvar.js')
-  , stickysampling   = require('./lib/sticky-sampling.js')
-  , frequent         = require('./lib/frequent.js')
-  , exact            = require('./lib/exact.js')
+var countmin         = require('./lib/counter/countmin-sketch.js')
+  , spacesaving      = require('./lib/counter/spacesaving.js')
+  , lossy            = require('./lib/counter/lossy.js')
+  , lossyvar         = require('./lib/counter/lossy-variant.js')
+  , stickysampling   = require('./lib/counter/sticky-sampling.js')
+  , frequent         = require('./lib/counter/frequent.js')
+  , real             = require('./lib/counter/real.js')
   ;
 
 module.exports = {
-    CountMin: countmin,
+    CountMinSketch: countmin,
     SpaceSaving: spacesaving,
-    LossyCounting: lossycounting,
-    LossyCountingVariant: lossycountingvar,
+    LossyCounting: lossy,
+    LossyCountingVariant: lossyvar,
     StickySampling: stickysampling,
     Frequent: frequent,
-    Exact: exact
+    RealCounting: real
 };

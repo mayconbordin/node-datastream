@@ -7,13 +7,13 @@ var fs       = require('fs')
   ;
   
 var algorithms = {
-    'countmin'        : {ref: ds.CountMin, options: {delta: 1e-7, epsilon: 0.05, k: 10}},
+    'countmin'        : {ref: ds.CountMinSketch, options: {delta: 1e-7, epsilon: 0.05, k: 10}},
     'spacesaving'     : {ref: ds.SpaceSaving, options: {maxEntries: 100}},
     'lossycounting'   : {ref: ds.LossyCounting, options: {epsilon: 5e-3, support: 10}},
     'lossycountingvar': {ref: ds.LossyCountingVariant, options: {epsilon: 5e-3, support: 10}},
     'stickysampling'  : {ref: ds.StickySampling, options: {epsilon:0.001, support: 0.01, delta: 10e-4}},
     'frequent'        : {ref: ds.Frequent, options: {epsilon: 1e-4}},
-    'exact'           : {ref: ds.Exact, options: {}}
+    'real'            : {ref: ds.RealCounting, options: {}}
 };
 
 var algorithm = process.argv[2];

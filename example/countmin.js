@@ -1,6 +1,6 @@
 var ds = require('../');
 
-var counter = new ds.CountMin({delta: 1e-7, epsilon: 0.05, k: 10});
+var counter = new ds.CountMinSketch({delta: 1e-7, epsilon: 0.05, k: 10});
 
 var alpha = 'abcdefghi';
 var stream = [];
