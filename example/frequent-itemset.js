@@ -12,6 +12,7 @@ var algorithms = {
     'lossycounting'   : {ref: ds.LossyCounting, options: {epsilon: 5e-3, support: 10}},
     'lossycountingvar': {ref: ds.LossyCountingVariant, options: {epsilon: 5e-3, support: 10}},
     'stickysampling'  : {ref: ds.StickySampling, options: {epsilon:0.001, support: 0.01, delta: 10e-4}},
+    'frequent'        : {ref: ds.Frequent, options: {epsilon: 1e-4}},
     'exact'           : {ref: ds.Exact, options: {}}
 };
 
