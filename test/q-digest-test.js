@@ -107,5 +107,53 @@ exports['qdigest'] = nodeunit.testCase({
         });
         
         test.done();
+    },
+    
+    'test merge': function (test) {
+        var compressionFactor = 2;
+
+        var aSamples = [0,0,1,0,1,1];
+        var bSamples = [0,1,0,0,0,3];
+        var allSamples = aSamples.concat(bSamples);
+
+        var a = new QDigest(compressionFactor);
+        var b = new QDigest(compressionFactor);
+        var c = new QDigest(compressionFactor);
+        
+        aSamples.forEach(function(x) {
+            a.offer(x);
+        });
+        
+        bSamples.forEach(function(x) {
+            b.offer(x);
+        });
+        
+        allSamples.forEach(function(x) {
+            c.offer(x);
+        });
+        
+        var ab = QDigest.unionOf(a, b);
+
+        test.equal(allSamples.length, c.computeActualSize());
+
+        var logCapacity = 1;
+        var max = 0;
+        
+        allSamples.forEach(function(x) {
+            max = Math.max(max, x);
+        });
+        
+        for (var scale = 1; scale < max; scale *= compressionFactor, logCapacity++) {}
+
+        var eps = logCapacity / compressionFactor;
+        for (var q = 0; q <= 1; q += 0.01)
+        {
+            var res = c.getQuantile(q);
+            var actualRank = actualRankOf(res, allSamples);
+            test.ok(q >= actualRank[0] - eps && q <= actualRank[1] + eps,
+                    actualRank[0] + " .. " + actualRank[1] + " outside error bound for  " + q);
+        }
+        
+        test.done();
     }
 });
