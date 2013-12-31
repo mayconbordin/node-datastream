@@ -68,15 +68,19 @@ SOFTWARE.
 [1] Cormode, Graham, and S. Muthukrishnan. "An improved data stream summary: the 
     count-min sketch and its applications." Journal of Algorithms 55.1 (2005):
     58-75.
+
 [2] R. Karp, C. Papadimitriou, and S. Shenker. A simple algorithm for ﬁnding 
     frequent elements in sets and bags. ACM Transactions on Database Systems,
     28:51–55, 2003.
+
 [3] E. Demaine, A. Lopez-Ortiz, and J. I. Munro. Frequency estimation of internet
     packet streams with limited space. In European Symposium on Algorithms
     (ESA), 2002.
+
 [4] Manku, Gurmeet Singh, and Rajeev Motwani. "Approximate frequency counts over
     data streams." Proceedings of the 28th international conference on Very
     Large Data Bases. VLDB Endowment, 2002.
+
 [5] Metwally, Ahmed, Divyakant Agrawal, and Amr El Abbadi. "Efficient computation
     of frequent and top-k elements in data streams." Database Theory-ICDT 2005.
     Springer Berlin Heidelberg, 2005. 398-412.
