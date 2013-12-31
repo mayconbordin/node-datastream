@@ -5,17 +5,25 @@
     "main" : "index.js",
     "dependencies" : {
         "heap" : "~0.2.3",
-        "hashes": "~0.1.2"
+        "hashes": "~0.1.2",
+        "fifo": "~0.2.0",
+        "long": "~1.1.2",
+        "nodeunit": "~0.8.2",
+        "mersennetwister": "~0.1.1"
     },
     "devDependencies" : {
 
     },
     "scripts" : {
-        
+        "test": "./node_modules/.bin/nodeunit test"
     },
     "repository" : {
         "type" : "git",
         "url" : "http://github.com/mayconbordin/node-datastream.git"
+    },
+    "directories": {
+        "test": "test",
+        "lib": "lib"
     },
     "keywords" : [
         "data stream processing"
