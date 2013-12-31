@@ -3,7 +3,7 @@
 [node-datastream](http://github.com/mayconbordin/node-datastream) is a collection
 of algorithms for data stream processing.
 
-# Current Algorithms
+# Algorithms
 
 ### Frequent itemsets
 
@@ -12,6 +12,10 @@ of algorithms for data stream processing.
 * Lossy Counting and its variant [4]
 * SpaceSaving [5]
 * Sticky Sampling [4]
+
+### Quantiles
+
+* Q-Digest [6]
 
 # Example
 
@@ -84,3 +88,7 @@ SOFTWARE.
 [5] Metwally, Ahmed, Divyakant Agrawal, and Amr El Abbadi. "Efficient computation
     of frequent and top-k elements in data streams." Database Theory-ICDT 2005.
     Springer Berlin Heidelberg, 2005. 398-412.
+    
+[6] Shrivastava, Nisheeth, et al. "Medians and beyond: new aggregation techniques
+    for sensor networks." Proceedings of the 2nd international conference on
+    Embedded networked sensor systems. ACM, 2004.
